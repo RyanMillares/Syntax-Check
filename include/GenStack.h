@@ -3,26 +3,26 @@
 #include <stack>
 using namespace std;
 
-template <typename T>
+template <typename T> //annoying template thing
 class GenStack{
 public:
-  GenStack();
-  //overload
-  GenStack(int maxSize);
-  ~GenStack();
+  GenStack(); //default constructor
+  GenStack(int maxSize); //overloaded constructor
+  ~GenStack(); //deconstructor
 
-  int getSize();
-  bool isEmpty();
-  bool isFull();
-  void push(T data);
-  void resize();
-  T pop();
-  T peek();
-  int max;
-  int top;
-  T *myArray;
-
+  int getSize(); //return size of stack
+  bool isEmpty(); //return true if stack is empty
+  bool isFull(); //return true if stack is full
+  void push(T data); //push some generic data
+  void resize(); //resize to fit bigger number of data
+  T pop(); //return top and decrement
+  T peek(); //just return top
 private:
+  int max; //size of stack
+  int top; //index for top element
+  T *myArray; //array of generic type
+
+
 
 };
 /**
